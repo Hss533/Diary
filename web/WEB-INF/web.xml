@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Diary</display-name>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    <!--过滤器-->
+   <!-- <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>per.hss.filter.LoginFilter</filter-class>
+    </filter>
+-->
+    <!--<filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>per.hss.web.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Main</servlet-name>
+        <servlet-class>per.hss.web.MainServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Main</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DiaryType</servlet-name>
+        <servlet-class>per.hss.web.DiaryTypeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DiaryType</servlet-name>
+        <url-pattern>/diaryType</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Diary</servlet-name>
+        <servlet-class>per.hss.web.DiaryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Diary</servlet-name>
+        <url-pattern>/diary</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>User</servlet-name>
+        <servlet-class>per.hss.web.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>User</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>per.hss.web.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+</web-app>

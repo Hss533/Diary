@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="apache-tomcat-8.5">
+    <CLASSES>
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/webapps/docs/appdev/sample/src" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/webapps/examples/WEB-INF/classes" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/webapps/examples/jsp/plugin/applet" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/AjaxLearn" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/Diary" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/ElLearn" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/JSP_learning" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/JsonLearn" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/ROOT" />
+      <root url="file://F:/apache-tomcat-8.5.23-windows-x64/apache-tomcat-8.5.23/work/Catalina/localhost/StudentInfo" />
+    </SOURCES>
+  </library>
+</component>
