@@ -30,6 +30,7 @@ public class UserServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.setCharacterEncoding("utf-8");
         String action=request.getParameter("action");
         if("preSave".equals(action))
@@ -85,7 +86,8 @@ public class UserServlet extends HttpServlet {
                     imageChanges=true;
                     String imageName= dateUtil.getCurrentDateStr();
                     user.setImageName(imageName+"."+item.getName().split("\\.")[1]);
-                    String filePath= propertiesUtil.getValue("imagePath")+imageName+"."+item.getName().split("\\.")[1];
+                    String filePath=request.getSession().getServletContext().getRealPath("/userImages/")+imageName+"."+item.getName().split("\\.")[1];
+                    System.out.println(filePath);
                     item.write(new File(filePath));
                 }catch(Exception e)
                 {
@@ -104,10 +106,12 @@ public class UserServlet extends HttpServlet {
             if(saveNums>0)
             {
                 user.setImageName(propertiesUtil.getValue("imageFile")+user.getImageName());
+                System.out.println("git"+user.getImageName()+"lalal");
                 session.setAttribute("currentUser",user);
-                request.getRequestDispatcher("mainTemp.jsp").forward(request,response);//保存成功后直接跳到主页
+                request.getRequestDispatcher("main?all=true").forward(request,response);//保存成功后直接跳到主页
             }else{
                 request.setAttribute("currentUser",user);
+                System.out.println("保存失败");
                 request.setAttribute("error","保存失败");
                 request.setAttribute("mainPage","user/userSave.jsp");
                 request.getRequestDispatcher("mainTemp.jsp").forward(request,response);

@@ -21,9 +21,9 @@ public class LoginFilter implements Filter{
         if(object==null&&path.indexOf("login")<0&&path.indexOf("bootstrap")<0&&path.indexOf("image")<0)
         {
             //不是通过正常途径登陆且没有session
-            request.getRequestDispatcher("login.jsp").forward(servletRequest,servletResponse);
+            request.getRequestDispatcher("logintest.jsp").forward(servletRequest,servletResponse);
         }else{
-            filterChain.doFilter(servletRequest,servletResponse);
+            filterChain.doFilter(servletRequest,servletResponse);//已经登录
         }
     }
 

@@ -14,11 +14,13 @@ public class LoginServlet extends HttpServlet {
     DbUtil dbUtil = new DbUtil();
     UserDao userDao = new UserDao();
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         this.doPost(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
 
         request.setCharacterEncoding("utf-8");
         HttpSession session=request.getSession();
@@ -33,12 +35,12 @@ public class LoginServlet extends HttpServlet {
             if (currentUser == null) {
                 request.setAttribute("user", user);
                 request.setAttribute("error", "用户名或密码错误");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
+                request.getRequestDispatcher("logintest.jsp").forward(request, response);
             } else {
                 if ("remember-me".equals(remember)) {
                     rememberMe(userName,password,response);
                 }
-                session.setAttribute("currentUser",currentUser);
+                session.setAttribute("currentUser",currentUser);//登录成功之后要将信息放到session中去
                 request.getRequestDispatcher("main").forward(request,response);
             }
 
@@ -51,7 +53,7 @@ public class LoginServlet extends HttpServlet {
     {
         //设置cookie
         Cookie user=new Cookie("user",userName+"-"+password);
-        user.setMaxAge(1*60*60*24*7);
+        user.setMaxAge(1*60*60*24*7);//一周
         response.addCookie(user);
 }
 }

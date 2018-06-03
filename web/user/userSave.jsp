@@ -17,13 +17,13 @@
 		个人信息设置</div>
 	<div class="row-fluid" style="padding-top: 20px;">
 		<div class="span4">
-			<img src="${currentUser.imageName }">
+			<img src="${pageContext.request.contextPath}/${currentUser.imageName }">
 		</div>
 		<div class="span8">
 			<form action="user?action=save" method="post" enctype="multipart/form-data" onsubmit="return checkForm()">
 				<table width="100%">
 					<tr>
-						<td width="20%">头像路径：</td>
+						<td width="20%">头像路径:</td>
 						<td><input type="file" id="imagePath" name="imagePath"/></td>
 					</tr>
 					<tr>

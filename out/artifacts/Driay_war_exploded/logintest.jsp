@@ -77,7 +77,7 @@
 <body style="background: url('${pageContext.request.contextPath}/imageLogin/image1.jpg');background-size: cover;">
 
     <div >
-        <form class="form-horizontal" action="Login" method="post" onsubmit="return checkForm()">
+        <form class="form-horizontal" action="login" method="post" onsubmit="return checkForm()">
            <div class="control-group">
                 <label class="control-label" for="userName">UserName</label>
                 <div class="controls">
